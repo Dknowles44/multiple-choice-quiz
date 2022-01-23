@@ -10,24 +10,43 @@
 </head>
 <body>
     <!-- Question container -->
-        <div class= "container">
+    <div class= "container">
             <h2>Coding challenge</h2>
             <h2>Time is limited, wrong answers will make it shorter!</h2> 
         
-            <div id="question-container" class="hide">
+        <div id="question-container" class="hide">
+            <div id="timer">Time Remaining:</div>
             <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button id="q-1" class="btn">Answer 1</button>
-                <button id="q-2" class="btn">Answer 2</button>
-                <button id="q-3" class="btn">Answer 3</button>
-                <button id="q-4" class="btn">Answer 4</button>
-            </div>
+        <div id="answer-buttons" class="btn-grid">
+            <button id="q-1" class="btn">Answer 1</button>
+            <button id="q-2" class="btn">Answer 2</button>
+            <button id="q-3" class="btn">Answer 3</button>
+            <button id="q-4" class="btn">Answer 4</button>
+        </div>
         </div>
         <div class="controls">
         <button id="start-btn" class="start-btn btn">Start</button>
         <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
-    </div>
     
+
+    </div>
+    <!-- Quiz Over -->
+    <div id="quiz-over">
+            <!-- saving high score -->
+            <div id="finalScore"></div>
+            <input type="text" size = "50" placeholder="Enter Initials for High Score" name="initials" id="initials">
+            <button id="submitScore">Submit Score</button>
+    </div>
+    <div id= highScore-container>
+    <div id="highScore-page">
+        <div id="highScore-header">
+            <h3>User Initials</h3>
+            <h3>Score</h3>
+        </div>
+        <div id= "highScore-initials"></div>
+        <div id= "highScore-score"></div>
+    </div>
+    </div>
 </body>
 </html>
