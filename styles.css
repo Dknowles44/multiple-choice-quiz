@@ -1,0 +1,62 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* box styling */
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    }
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    border-radius: 5px;
+    background-color: cadetblue;
+    padding: 15px;
+    box-shadow: 0 0 15px 2px;
+}
+/* button styling */
+.btn-grid {
+    display: grid;
+    gap: 5px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.btn:hover {
+    border-color: black;
+}
+/* start and next button stylinh */
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+h2 { 
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bolder;
+    }
+    
