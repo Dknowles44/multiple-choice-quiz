@@ -1,66 +1,72 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
+// collecting HTML elements for functions
+const startButton = document.getElementById("startbtn")
+var quizBody = document.getElementById("quiz")
+var quizTimer = document.getElementById("timer")
+var startQuizDiv = document.getElementById("start-page")
+var questionsEl = document.getElementById("question")
+var buttonA = document.getElementById("q-A")
+var buttonB = document.getElementById("q-B")
+var buttonC = document.getElementById("q-C")
+var buttonD = document.getElementById("q-D")
+var resultsEl = document.getElementById("result")
+var finalScoreEl = document.getElementById("finalScore")
+var gameoverDiv = document.getElementById("quizEnded")
+var highscoreContainer = document.getElementById("scoreContainer")
+var highscoreDiv = document.getElementById("scorePage")
+var highscoreInputName = document.getElementById("initials")
+var highscoreDisplayName = document.getElementById("highScore-initials")
+var highscoreDisplayScore = document.getElementById("highScore-score")
+var submitScoreBtn = document.getElementById("submitscore")
+var endGameBtns = document.getElementById("quizEndedBtns")
 
-const questions = [
-    {
+// Questions Obj
+var questions = [{
+    
         question: 'What does CSS stand for ?',
-        answers: [
-            { text: 'cascading silly slides', correct: false},
-            { text: 'cascading style sheets', correct: true},
-            { text: 'chicken seasoned saturday', correct: false},
-            { text: 'catfish swim slow', correct: false}
-
-        ]
+        textA: 'cascading silly slides',
+        textB: 'cascading style sheets',
+        textC: 'chicken seasoned saturday',
+        textD: 'catfish swim slow',
+        correctAnswer: "b"
     },
     
     {
         question: 'What is JavaScript used for ?',
-        answers: [
-            { text: 'allows you to make webpages interactive', correct: true},
-            { text: 'allows potatos to grow on wednesday', correct: false},
-            { text: 'style a webpage', correct: false},
-            { text: 'the right to party ?', correct: false}
-
-        ]
+        textA: 'allows you to make webpages interactive',
+        textB: 'allows potatos to grow on wednesday',
+        textC: 'style a webpage',
+        textD: 'the right to party ?',
+        correctAnswer: "a"
     },
 
     {
         question: 'What does DOM stand for ?',
-        answers: [
-            { text: 'Document Occupancy Model', correct: false},
-            { text: 'Dollar Off Mondays', correct: false},
-            { text: 'Diversified Optical Manuvering', correct: false},
-            { text: 'Document Object Model', correct: true}
-
-        ]
+        textA: 'Document Occupancy Model',
+        textB: 'Dollar Off Mondays',
+        textC: 'Diversified Optical Manuvering',
+        textD: 'Document Object Model',
+        correctAnswer: "d"
     },
     
     {
-        question: 'What is used most to add styling to a web page ?',
-        answers: [
-            { text: 'HTML', correct: false},
-            { text: 'JavaScript', correct: false},
-            { text: 'CSS', correct: true},
-            { text: 'API', correct: false}
-
-        ]
+        question: 'What is used most commonly to add styling to a web page ?',
+        textA: 'HTML',
+        textB: 'JavaScript',
+        textC: 'CSS',
+        textD: 'API',
+        correctAnswer: "c"
     },
 
     {
         question: 'What HTML attribute references an external JavaScript file?',
-        answers: [
-            { text: 'src', correct: true},
-            { text: 'href', correct: false},
-            { text: 'index', correct: false},
-            { text: 'class', correct: false}
+        textA: 'src',
+        textB: 'href',
+        textC: 'index',
+        textD: 'class',
+        correctAnswer: "a"
+    },
 
-        ]
-    }
-
-]
+];
 
 var shuffledQuestions, currentQuestionIndex
 
