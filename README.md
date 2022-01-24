@@ -5,9 +5,9 @@ To test your knowledge of coding.
 
 ## Built with
 <ul>
-  <li>*JS</li>
-  <li>*CSS</li>
-  <li>*HTML</li>
+  <li>JS</li>
+  <li>CSS</li>
+  <li>HTML</li>
  </ul>
  
  ## Website
