@@ -31,6 +31,17 @@ p {
     text-shadow: .5px .5px red;
 }
 
+button:hover {
+    border-color: gold;
+}
+
+button {
+    display: inline-block;
+    background-color:hotpink;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .container {
     width: 800px;
     max-width: 80%;
@@ -39,24 +50,32 @@ p {
     padding: 15px;
     box-shadow: 0 0 15px 2px;
 }
-/* button styling */
+    /* button styling */
 #startbtn, #startPage-Highscore {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 2px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 2px;
 }
 
-.btn:hover {
-    border-color: black;
-}
+#starting-btns {
+    margin-top: 5px;
+    }
+
 #quiz {
     display: none;
 }
 
 #result {
     display: none;
+}
+
+#start-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 /* styles for timer */
@@ -81,4 +100,19 @@ p {
     height: 1.5rem;
     border: 2px
 }
-    
+
+#scorePage {
+    display: none;
+    width: 50%;
+    border: solid;
+    border-color: gold;
+}
+
+#scoreContainer {
+    height:100%;
+    width:100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
