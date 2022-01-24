@@ -9,44 +9,50 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-    <!-- Question container -->
+    <!-- Start Page -->
     <div class= "container">
-            <h2>Coding challenge</h2>
-            <h2>Time is limited, wrong answers will make it shorter!</h2> 
-        
-        <div id="question-container" class="hide">
-            <div id="timer">Time Remaining:</div>
-            <div id="question">Question</div>
-        <div id="answer-buttons" class="btn-grid">
-            <button id="q-1" class="btn">Answer 1</button>
-            <button id="q-2" class="btn">Answer 2</button>
-            <button id="q-3" class="btn">Answer 3</button>
-            <button id="q-4" class="btn">Answer 4</button>
-        </div>
-        </div>
-        <div class="controls">
-        <button id="start-btn" class="start-btn btn">Start</button>
-        <button id="next-btn" class="next-btn btn hide">Next</button>
-        </div>
-    
 
+        <div id="start-page">
+            <h2>Coding challenge</h2>
+            <h2>Time is limited!</h2> 
+        <button id="startbtn">Take Quiz</button>
+        <button id="startPage-Highscore" onclick="showHighscore()">Top Scores</button>
+        </div>
+            
+    <div id="quiz">
+        <div id="timer">Time Remaining:</div>
+            <div id="question"><p>Question</p></div>
+                <button id="q-1" onClick="">Answer 1</button>
+                <button id="q-2" onClick="">Answer 2</button>
+                <button id="q-3" onClick="">Answer 3</button>
+                <button id="q-4" onClick="">Answer 4</button>
+                <div id="result"></div>
     </div>
-    <!-- Quiz Over -->
-    <div id="quiz-over">
-            <!-- saving high score -->
-            <div id="finalScore"></div>
-            <input type="text" size = "50" placeholder="Enter Initials for High Score" name="initials" id="initials">
-            <button id="submitScore">Submit Score</button>
+    
     </div>
-    <div id= highScore-container>
-    <div id="highScore-page">
+      <!-- quiz has ended -->  
+    <div id="quizEnded">
+        
+        <div id="finalscore"></div>
+        <input type="text" size = "50" placeholder="Enter Initials" name="initials" id="initials"/>
+        <button id="submitscore">Submit</button>
+    </div>
+    <!-- Saving high scores -->
+    <div id= "scoreContainer">
+    <div id= "scorePage">
         <div id="highScore-header">
-            <h3>User Initials</h3>
+            <h3>Initials</h3>
             <h3>Score</h3>
         </div>
         <div id= "highScore-initials"></div>
         <div id= "highScore-score"></div>
     </div>
     </div>
+    <!-- Buttons for Score screen -->
+    <div id="quizEndedBtns">
+        <button id="tryAgain" onclick="">Try Again</button>
+        <button id="clearHighScore" onclick="">Clear Scores</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

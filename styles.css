@@ -14,6 +14,23 @@ body {
     align-items: center;
     }
 
+h2 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    }
+
+input {
+    text-align: center;
+}
+
+p {
+    font-size: x-large;
+    text-align: center;
+    text-shadow: .5px .5px red;
+}
+
 .container {
     width: 800px;
     max-width: 80%;
@@ -23,42 +40,25 @@ body {
     box-shadow: 0 0 15px 2px;
 }
 /* button styling */
-.btn-grid {
-    display: grid;
-    gap: 5px;
-}
-
-.btn {
+#startbtn, #startPage-Highscore {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 15px;
     border-radius: 5px;
-    padding: 5px 10px;
+    box-shadow: 0 0 10px 2px;
 }
 
 .btn:hover {
     border-color: black;
 }
-/* start and next button stylinh */
-.start-btn, .next-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 15px;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hide {
+#quiz {
     display: none;
 }
-/* header styles */
-h2 { 
-display: flex;
-justify-content: center;
-align-items: center;
-font-weight: bolder;
-    }
+
+#result {
+    display: none;
+}
+
 /* styles for timer */
 #timer {
     font-family: 'Times New Roman', Times, serif;
@@ -66,6 +66,8 @@ font-weight: bolder;
     font-size: 1.5rem;
     text-align: center;
     border-radius: 5px;
+    padding-top: 5px;
+    box-shadow: 0px 0px 15px 2px;
     }
 
 #quiz-over {
